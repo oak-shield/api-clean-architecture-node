@@ -1,6 +1,4 @@
-import { UserData } from './user-data';
 import { testEnvironment } from "../../../jest.config";
-
 import {UserData} from './user-data'
 
 describe('Register user on mailing list use case', () => {
