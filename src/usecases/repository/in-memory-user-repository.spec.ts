@@ -5,8 +5,8 @@ import { InMemoryUserRepository } from "./in-memory-user-repository";
 describe('In memory User repository', () => {
     test('should return null if user is not found', async () => {
         const users: UserData[] = []
-        const userRepo = new InMemoryUserRepository(users)
-        const user = await userRepo.findUserByEmail('any@mail.com');
+        const systemUnderTest = new InMemoryUserRepository(users)
+        const user = await systemUnderTest.findUserByEmail('any@mail.com');
         expect(user).toBeNull()
     })
 
@@ -14,21 +14,21 @@ describe('In memory User repository', () => {
         const users: UserData[] = []
         const name = 'any_name'
         const email = 'any@mail.com'
-        const userRepo = new InMemoryUserRepository(users)
+        const systemUnderTest = new InMemoryUserRepository(users)
 
-        await userRepo.add({name, email})
-        const user = await userRepo.findUserByEmail(email);
+        await systemUnderTest.add({name, email})
+        const user = await systemUnderTest.findUserByEmail(email);
         expect(user.name).toBe(name)
     })
-    
+
     test('should return all users in repository', async () => {
         const users: UserData[] = [
-            {name: 'any_name', email: 'any@mail.com'}, 
+            {name: 'any_name', email: 'any@mail.com'},
             {name: 'second_name', email: 'second@mail.com'}
         ]
 
-        const userRepo = new InMemoryUserRepository(users)
-        const returnedUsers = await userRepo.findAllUsers()
+        const systemUnderTest = new InMemoryUserRepository(users)
+        const returnedUsers = await systemUnderTest.findAllUsers()
         expect(returnedUsers.length).toBe(2)
     })
 })
