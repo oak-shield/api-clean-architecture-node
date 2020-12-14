@@ -1,4 +1,4 @@
-import { UserData } from "../register-user-on-mailing-list/user-data";
+import { UserData } from "../user-data";
 import { InMemoryUserRepository } from "./in-memory-user-repository";
 
 
