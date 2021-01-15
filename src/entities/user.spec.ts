@@ -1,5 +1,5 @@
-import { InvalidEmailError } from './errors/InvalidEmailError';
-import { InvalidNameError } from './errors/InvalidNameError';
+import { InvalidEmailError } from './errors/invalid-email-error';
+import { InvalidNameError } from './errors/invalid-name-error';
 import { left } from './../shared/either';
 import { User } from "./user"
 
