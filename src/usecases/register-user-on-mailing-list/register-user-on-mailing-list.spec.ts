@@ -3,7 +3,7 @@ import { UserRepository } from './ports/user-repository'
 import { RegisterUserOnMailingList } from './register-user-on-mailing-list'
 import { InMemoryUserRepository } from './repository/in-memory-user-repository'
 
-describe('Register user on mailing list use case', () => {
+describe('Register user on mailing list use  case', () => {
     test('should add user with complete data to mailing list', async () => {
         const users: UserData[] = []
         const repo: UserRepository = new InMemoryUserRepository(users)
