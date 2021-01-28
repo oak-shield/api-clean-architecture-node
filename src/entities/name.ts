@@ -14,6 +14,7 @@ export class Name{
             return left(new InvalidNameError(name))
         }
 
+        //Eu já tinha corrigido na aula passada
         return right(new Name(name))
     }
 

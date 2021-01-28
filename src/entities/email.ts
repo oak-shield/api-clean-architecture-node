@@ -13,6 +13,7 @@ export class Email {
             return right(new Email(email))
         }
 
+        //Eu já tinha corrigido na aula passada
         return left(new InvalidEmailError(email))
     }
 
